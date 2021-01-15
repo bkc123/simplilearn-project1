@@ -53,38 +53,34 @@ public class OperationController {
 	    }
 		
 		// File operation option
-		public void fileOperation() {
-			System.out.print("Please enter your choice from 1, 2, 3 or 4 : ");
-			String choice = sc.nextLine();
-			
-			switch(choice) {
-				case "1":
-					addFile();
-					break;
+				public void fileOperation() {
+					System.out.print("Please enter your choice from 1, 2, 3 or 4 : ");
+					String choice = sc.nextLine();
 					
-				case "2": 
-					 System.out.print("Please enter a file to delete: ");
-					 f= sc.nextLine();
-					file.deleteFile(f);
-					break;
+					switch(choice) {
+						case "1":
+							file.addFile();
+							break;
+							
+						case "2": 
+							break;
+						
+						case "3": 
+							System.out.print("Please enter a file to search: ");
+							f= sc.nextLine();
+							file.searchFile(f);
+							break;
+							
+						case "4":
+							showMenu();
+							break;
+							
+						default:
+							System.out.println("Entered Invalid input, please choose 1, 2, 3 or 4.");
 				
-				case "3": 
-					System.out.print("Please enter a file to search: ");
-					f= sc.nextLine();
-					file.searchFile(f);
-					break;
-					
-				case "4":
-					showMenu();
-					break;
-					
-				default:
-					System.out.println("Entered Invalid input, please choose 1, 2, 3 or 4.");
-		
-			}
-			showFileOperations();
-			
-		}
+					}
+					showFileOperations();
+				}
 		
 		
 

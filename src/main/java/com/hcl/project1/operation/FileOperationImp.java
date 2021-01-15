@@ -12,37 +12,59 @@ import java.util.*;
 
 public class FileOperationImp implements FileOperation{
 	Scanner sc = new Scanner(System.in);
-	
+
 	SortFiles m = new SortFiles();
 	Path path = Paths.get(m.FOLDER);
 
 
-@Override
-public void addExistingFile() throws InvalidPathException{
-	System.out.print("Please provide a file path:");
-	String filePath = sc.nextLine();
-	Path path = Paths.get(filePath);
+	@Override
+	public void addFile() throws InvalidPathException{
+		System.out.print("Please provide a file path:");
+		String filePath = sc.nextLine();
+		Path path = Paths.get(filePath);
 
-	if (!Files.exists(path)) {
-		System.out.println("File does not exist");
-		return;
-	}
+		if (!Files.exists(path)) {
+			System.out.println("File does not exist");
+			return;
+		}
 
-	String newFilePath = m.FOLDER + "/" + path.getFileName();
-	int inc = 0;
-	while (Files.exists(Paths.get(newFilePath))) {
-		inc++;
-		newFilePath = m.FOLDER + "/" + inc + "_" + path.getFileName();
-		//System.out.println("Successfully copied file to the " + newFilePath);
-	}
-	try {
-		Files.copy(path, Paths.get(newFilePath));
-		System.out.println("Successfully, copied file to the " + newFilePath);
-	} catch(IOException e) {
-		System.out.println("Sorry, can't copy file to " + newFilePath);
-	}
+		String newFilePath = m.FOLDER + "/" + path.getFileName();
+		int inc = 0;
+		while (Files.exists(Paths.get(newFilePath))) {
+			inc++;
+			newFilePath = m.FOLDER + "/" + inc + "_" + path.getFileName();
+			//System.out.println("Successfully copied file to the " + newFilePath);
+		}
+		try {
+			Files.copy(path, Paths.get(newFilePath));
+			System.out.println("Successfully, copied file to the " + newFilePath);
+		} catch(IOException e) {
+			System.out.println("Sorry, can't copy file to " + newFilePath);
+		}
 
-}
+	}
+	@Override
+	public void searchFile(String f) {
+		// TODO Auto-generated method stub
+		File[] files = new File(m.FOLDER).listFiles();
+		System.out.println("------------------");
+		System.out.println("Scanning through folder to search ");
+		//Set<String > myTree= new TreeSet<>();
+		boolean found= false;
+		for (File file: files) {
+			if ((file.getName()).equals(f)) {
+				found= true;
+				System.out.println( "Successfully able to locate " + file.getName() );
+				break;
+			}
+
+		}
+		if (found == false) {
+			System.out.println("Sorry, unable to locate " + f);
+		}
+
+
+	}
 
 
 }

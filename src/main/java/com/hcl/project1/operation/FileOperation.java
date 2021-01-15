@@ -6,5 +6,6 @@ import java.io.IOException;
 public interface FileOperation {
 	
 	public void addFile();
+	public void searchFile(String f);
 	
 }
