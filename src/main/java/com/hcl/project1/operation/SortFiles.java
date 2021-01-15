@@ -8,6 +8,7 @@ import java.util.TreeSet;
 
 public class SortFiles extends AbstractSortFiles {
 
+	// final location or default location
 	final String FOLDER = "C:\\Users\\chhan\\Documents\\New folder";
 
 	@Override

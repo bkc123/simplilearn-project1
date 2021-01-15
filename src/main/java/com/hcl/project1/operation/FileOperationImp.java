@@ -20,7 +20,7 @@ public class FileOperationImp implements FileOperation{
 	public void addExistingFile() throws InvalidPathException{
 		System.out.print("Please provide a file path:");
 		String filePath = sc.nextLine();
-		Path path = Paths.get(filePath);
+		Path path = Paths.get(filePath.toLowerCase());
 
 		if (!Files.exists(path)) {
 			System.out.println("File does not exist");
@@ -29,7 +29,7 @@ public class FileOperationImp implements FileOperation{
 
 		String newFilePath = m.FOLDER + "/" + path.getFileName();
 		int inc = 0;
-		while (Files.exists(Paths.get(newFilePath))) {
+		while (Files.exists(Paths.get(newFilePath.toLowerCase()))) {
 			inc++;
 			newFilePath = m.FOLDER + "/" + inc + "_" + path.getFileName();
 			//System.out.println("Successfully copied file to the " + newFilePath);
@@ -42,18 +42,50 @@ public class FileOperationImp implements FileOperation{
 		}
 
 	}
+	// add new file to the default location
+	public void addNewFile() {
+		System.out.print("Please provide a file name:");
+		String f = sc.nextLine();
+		Path path=  Paths.get(f);
+		String newFilePath= m.FOLDER + "/" + path.getFileName();
+		//File file = new File(m.FOLDER + "/" + f);
+		if (!Files.exists(Paths.get(newFilePath.toLowerCase()))){
+			
+				File file = new File(m.FOLDER + "/" + f);
+				try {
+					file.createNewFile();
+					System.out.println("Successfully, created and added new  file to the " + file);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					System.out.println("Sorry, can't add " + f);
+				}
+		}
+		else {
+		System.out.println("Sorry, can't add " + f + ". It already exist in " + newFilePath.toLowerCase());
+		}
+		
+	}
 	
-	// add new file to the folder
+	// it is adding newFolder file to the default folder or location 
 	@Override
-	public void addNewFile(String f) {
+	public void addNewFolder() {
 		// TODO Auto-generated method stub
+		System.out.print("Please provide a file name:");
+		String f = sc.nextLine();
 		String newPath = path + "/" + f;
+		
 		try {
+			/*
+			if (!Files.exists(Paths.get(newPath.toLowerCase()))){
+				
+				File file = new File(m.FOLDER + "/" + f);
+				file.createNewFile();	
+			}*/
 			Files.copy(path, Paths.get(newPath));
-			System.out.println("Successfully, copied file to the " + newPath);
+			System.out.println("Successfully, added file to the " + f);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Sorry, can't copy file to " +newPath);
+			System.out.println("Sorry, can't add " + f + ". It already exist in " + newPath.toLowerCase());
 		}
 	}
 	
@@ -109,9 +141,7 @@ public class FileOperationImp implements FileOperation{
 			System.out.println( file.getName() );
 		}
 
-		//System.out.println("Unable to delete " + f +" or " + f + " doesnot exist in this folder");
-
-		/****
+		/****System.out.println("Unable to delete " + f +" or " + f + " doesnot exist in this folder");
 		Set <String > myTree = new TreeSet<>();
 		for (File file: files) {
 			if(!file.isFile()) {

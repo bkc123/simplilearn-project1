@@ -8,7 +8,9 @@ public interface FileOperation {
 	
 	public void addExistingFile();
 	
-	public void addNewFile(String f);
+	public void addNewFile();
+	
+	public void addNewFolder();
 	
 	public void searchFile(String f);
 	

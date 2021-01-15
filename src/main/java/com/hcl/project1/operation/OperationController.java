@@ -89,14 +89,15 @@ public class OperationController {
 		System.out.println("--------------" +
 				"\n1.) Add an existing file from another folder"+
 				"\n2.) Add a new file to the folder" +
-				"\n3.) Back to fileOperation menu" +
+				"\n3.) Add a new file alternative way(without parameter method) " +
+				"\n4.) Back to fileOperation menu" +
 				"\n--------------");
 		addOperation();
 	}
 
 	//add operations or options for file
 	public void addOperation() {
-		System.out.print("Please enter your choice from 1, 2 or 3 : ");
+		System.out.print("Please enter your choice from 1, 2, 3 or 4 : ");
 		String choice = sc.nextLine();
 
 		switch(choice) {
@@ -105,17 +106,20 @@ public class OperationController {
 			break;
 
 		case "2":
-			System.out.print("Please enter a file to add: ");
-			f = sc.nextLine();
-			file.addNewFile(f);
+			
+			file.addNewFile();
+			break;
+			
+		case "3":
+			file.addNewFolder();
 			break;
 
-		case "3":
+		case "4":
 			showFileOperations();
 			break;
 
 		default:
-			System.out.println("Entered Invalid input, please choose 1, 2 or 3.");
+			System.out.println("Entered Invalid input, please choose 1, 2, 3 or 4.");
 
 		}
 		showAddFileOperations();
