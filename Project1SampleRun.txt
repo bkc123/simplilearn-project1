@@ -1,0 +1,385 @@
+----------------------------------------
+Application: SimpliLearnProject1.hcl.com
+Developer: Bishnu K Chhantyal
+----------------------------------------
+ ***Main Menu*** 
+1.) Show files in ascending order
+2.) Perform file operations
+3.) Close the application
+---------------
+Enter your choice from 1, 2 or 3: 1
+------------------
+Displaying files in ascending order
+1_pom.xml
+2_pom.xml
+BasLectureNotes.txt
+RuntimComplexity.PNG
+arry_Runtime.PNG
+commond_line.txt
+linkstoproject.txt
+pom.xml
+------------------
+ ***Main Menu*** 
+1.) Show files in ascending order
+2.) Perform file operations
+3.) Close the application
+---------------
+Enter your choice from 1, 2 or 3: 2
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 1
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 1
+Please provide a file path:C:\Users\chhan\Documents\postman_testing.txt
+Successfully, copied file to the C:\Users\chhan\Documents\New folder/postman_testing.txt
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 2
+Please enter a file to add: Reva.txt
+Successfully, copied file to the C:\Users\chhan\Documents\New folder/Reva.txt
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 3
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: Reva.JPG
+------------------
+Scanning thorugh folder to delete
+Sorry,unable to delete Reva.JPG.It doesn't exist in folder
+
+List of files after deletion
+1_pom.xml
+2_pom.xml
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+Reva.jpg
+Reva.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: Reva.jpg
+------------------
+Scanning thorugh folder to delete
+Reva.jpg has been successfully deleted.
+
+List of files after deletion
+1_pom.xml
+2_pom.xml
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+Reva.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: 2_pom.xml
+------------------
+Scanning thorugh folder to delete
+2_pom.xml has been successfully deleted.
+
+List of files after deletion
+1_pom.xml
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+Reva.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: 1_pom.xml
+------------------
+Scanning thorugh folder to delete
+1_pom.xml has been successfully deleted.
+
+List of files after deletion
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+Reva.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: Reva.txt
+------------------
+Scanning thorugh folder to delete
+Reva.txt has been successfully deleted.
+
+List of files after deletion
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 3
+Please enter a file to search: Reva.txt
+------------------
+Scanning through folder to search 
+Sorry, unable to locate Reva.txt
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : Reva.jpg
+Entered Invalid input, please choose 1, 2, 3 or 4.
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 3
+Please enter a file to search: Reva.jpg
+------------------
+Scanning through folder to search 
+Sorry, unable to locate Reva.jpg
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 3
+Please enter a file to search: text.txt
+------------------
+Scanning through folder to search 
+Sorry, unable to locate text.txt
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: text.txt
+------------------
+Scanning through folder to delete
+Sorry, unable to delete text.txt. It doesn't exist in folder
+
+List of files after deletion
+arry_Runtime.PNG
+BasLectureNotes.txt
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 3
+Please enter a file to search: pom.xml
+------------------
+Scanning through folder to search 
+Successfully able to locate pom.xml
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 3
+Please enter a file to search: commond_line.txt
+------------------
+Scanning through folder to search 
+Successfully able to locate commond_line.txt
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 4
+ ***Main Menu*** 
+1.) Show files in ascending order
+2.) Perform file operations
+3.) Close the application
+---------------
+Enter your choice from 1, 2 or 3: 1
+------------------
+Displaying files in ascending order
+BasLectureNotes.txt
+RuntimComplexity.PNG
+arry_Runtime.PNG
+commond_line.txt
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+------------------
+ ***Main Menu*** 
+1.) Show files in ascending order
+2.) Perform file operations
+3.) Close the application
+---------------
+Enter your choice from 1, 2 or 3: 2
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 1
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 1
+Please provide a file path:C:\Users\chhan\IdeaProjects\simplilearn1\simplilearn_examples\pom.xml
+Successfully, copied file to the C:\Users\chhan\Documents\New folder/1_pom.xml
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 2
+Please enter a file to add: hello.java
+Successfully, copied file to the C:\Users\chhan\Documents\New folder/hello.java
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 2
+Please enter a file to add: file1.txt
+Successfully, copied file to the C:\Users\chhan\Documents\New folder/file1.txt
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 3
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: BasLectureNotes.txt
+------------------
+Scanning through folder to delete
+BasLectureNotes.txt has been successfully deleted.
+
+List of files after deletion
+1_pom.xml
+arry_Runtime.PNG
+commond_line.txt
+file1.txt
+hello.java
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+RuntimComplexity.PNG
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 1
+--------------
+1.) Add an existing file from another folder
+2.) Add a new file to the folder
+3.) Back to fileOperation menu
+--------------
+Please enter your choice from 1, 2 or 3 : 3
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 2
+Please enter a file to delete: RuntimComplexity.PNG
+------------------
+Scanning through folder to delete
+RuntimComplexity.PNG has been successfully deleted.
+
+List of files after deletion
+1_pom.xml
+arry_Runtime.PNG
+commond_line.txt
+file1.txt
+hello.java
+linkstoproject.txt
+pom.xml
+postman_testing.txt
+--------------
+1.) Add a file
+2.) Delete a file
+3.) Search for a file
+4.) Back to main menu
+--------------
+Please enter your choice from 1, 2, 3 or 4 : 4
+ ***Main Menu*** 
+1.) Show files in ascending order
+2.) Perform file operations
+3.) Close the application
+---------------
+Enter your choice from 1, 2 or 3: 3
+Thanks for using SimplilearnProject1.hcl.com. Closing application.

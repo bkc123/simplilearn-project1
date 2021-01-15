@@ -53,7 +53,7 @@ public class FileOperationImp implements FileOperation{
 			System.out.println("Successfully, copied file to the " + newPath);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("Sorry, can't copy file to " +f);
+			System.out.println("Sorry, can't copy file to " +newPath);
 		}
 	}
 	
