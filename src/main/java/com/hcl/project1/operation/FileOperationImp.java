@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.attribute.FileAttribute;
 import java.util.*;
 
 public class FileOperationImp implements FileOperation{
@@ -16,9 +15,9 @@ public class FileOperationImp implements FileOperation{
 	SortFiles m = new SortFiles();
 	Path path = Paths.get(m.FOLDER);
 
-
+	// add  by copying existing file
 	@Override
-	public void addFile() throws InvalidPathException{
+	public void addExistingFile() throws InvalidPathException{
 		System.out.print("Please provide a file path:");
 		String filePath = sc.nextLine();
 		Path path = Paths.get(filePath);
@@ -43,6 +42,21 @@ public class FileOperationImp implements FileOperation{
 		}
 
 	}
+	
+	// add new file to the folder
+	@Override
+	public void addNewFile(String f) {
+		// TODO Auto-generated method stub
+		String newPath = path + "/" + f;
+		try {
+			Files.copy(path, Paths.get(newPath));
+			System.out.println("Successfully, copied file to the " + newPath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Sorry, can't copy file to " +f);
+		}
+	}
+	
 	@Override
 	public void searchFile(String f) {
 		// TODO Auto-generated method stub

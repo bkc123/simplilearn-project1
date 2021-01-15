@@ -5,8 +5,14 @@ import java.io.IOException;
 
 public interface FileOperation {
 	
-	public void addFile();
+	
+	public void addExistingFile();
+	
+	public void addNewFile(String f);
+	
 	public void searchFile(String f);
+	
 	public void deleteFile(String f);
+	
 	
 }

@@ -23,9 +23,10 @@ public class SortFiles extends AbstractSortFiles {
 				// create tree set to sort the file
 			Set<String> sorted = new TreeSet<>();
 			for (File file: files) {
-				if (!file.isFile()) {
+				/*if (!file.isFile()) {
 					continue;
 				} 
+				*/
 				sorted.add(file.getName());
 			}
 			//sorted.forEach(file -> {System.out.println(file);});
