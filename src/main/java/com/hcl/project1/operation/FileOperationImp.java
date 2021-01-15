@@ -65,6 +65,32 @@ public class FileOperationImp implements FileOperation{
 
 
 	}
+	
+	@Override
+	public void deleteFile(String f) {
+		// TODO Auto-generated method stub
+		File[] files = new File(m.FOLDER).listFiles();
+		System.out.println("------------------");
+		System.out.println("Scanning thorugh folder to delete");
+
+		Set <String > myTree = new TreeSet<>();
+		for (File file: files) {
+			if(!file.isFile()) {
+				continue;
+			}
+			myTree.add(file.getName());
+		}
+		Boolean action= myTree.remove(f);
+		
+		if (action == true){
+			System.out.println(f + " has been successfully deleted.");
+		}else {
+			System.out.println(" unable to delete " + f +" or " + f + " doesnot exist in this folder" );
+		}
+		myTree.forEach(file -> System.out.println(file));
+		
+	
+	}
 
 
 }

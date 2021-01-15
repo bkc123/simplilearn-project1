@@ -63,8 +63,11 @@ public class OperationController {
 							break;
 							
 						case "2": 
+							 System.out.print("Please enter a file to delete: ");
+							 f= sc.nextLine();
+							file.deleteFile(f);
 							break;
-						
+							
 						case "3": 
 							System.out.print("Please enter a file to search: ");
 							f= sc.nextLine();

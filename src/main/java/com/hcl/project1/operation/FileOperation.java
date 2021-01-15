@@ -7,5 +7,6 @@ public interface FileOperation {
 	
 	public void addFile();
 	public void searchFile(String f);
+	public void deleteFile(String f);
 	
 }
