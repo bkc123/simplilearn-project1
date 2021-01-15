@@ -72,7 +72,32 @@ public class FileOperationImp implements FileOperation{
 		File[] files = new File(m.FOLDER).listFiles();
 		System.out.println("------------------");
 		System.out.println("Scanning thorugh folder to delete");
+		
+		boolean found= false;
+		for (File file: files) {
+			if ((file.getName()).equals(f)) {
+				System.out.println(file.getName() + " has been successfully deleted.");
+				file.delete();
+				found= true;
+				break;
+			}
 
+		}
+		
+		if (found == false) {
+			System.out.println("Sorry,unable to delete " + f +".It doesn't exist in folder");
+		}
+		
+		files = new File(m.FOLDER).listFiles();
+		
+		System.out.println ("\nList of files after deletion");
+		for (File file: files) {	
+			System.out.println( file.getName() );
+		}
+
+		//System.out.println("Unable to delete " + f +" or " + f + " doesnot exist in this folder");
+
+		/****
 		Set <String > myTree = new TreeSet<>();
 		for (File file: files) {
 			if(!file.isFile()) {
@@ -88,8 +113,8 @@ public class FileOperationImp implements FileOperation{
 			System.out.println(" unable to delete " + f +" or " + f + " doesnot exist in this folder" );
 		}
 		myTree.forEach(file -> System.out.println(file));
-		
-	
+		files = new File(myTree.toString()).listFiles();
+		*****/	
 	}
 
 
